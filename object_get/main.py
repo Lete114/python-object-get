@@ -14,7 +14,7 @@ def get(obj: Union[Dict, List], path: str, default: Any = None) -> Any:
     The value at the given property path of the object, or the default value if not found.
     """
     try:
-        path = path.replace("[", ".").replace("]", "")  # 处理数组下标
+        path = path.replace("[", ".").replace("]", "")
         arr = path.split(".")
         tmp = obj
         for i in arr:
